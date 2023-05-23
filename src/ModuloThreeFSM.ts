@@ -73,7 +73,15 @@ export class ModuloThreeFSM {
   * @returns {number} next state of the state machine after the transition.
   */
   public nextState(currentState: number, char: string): number {
-    return this._transitions[currentState][char];
+    const nextState = this._transitions[currentState][char];
+
+    if(this._states.includes(nextState)) {
+      return nextState;
+    } else {
+      throw new Error(`Next FSM state ${nextState} not found in valid state values`);
+    }
+
+
   }
 
   /**
