@@ -20,3 +20,14 @@ This little application gives several options for finding the remainder of divis
 
 #### Result of the last command
 <img width="1000" alt="Screenshot 2023-05-22 at 23 42 29" src="https://github.com/n0ne/mod-3-fsm/assets/783906/03ca493b-3882-474f-9ca5-87e63e90ff1f">
+
+
+
+#### Test each version separately
+
+You can also run tests separately for each option:
+
+- ModuloThreeFSM: `npm run test:api`
+- easy: `npm run test:easy`
+- standart: `npm run test:std`
+- advanced: `npm run test:adv`
