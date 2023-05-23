@@ -1,0 +1,19 @@
+{
+  "name": "fsm",
+  "version": "1.0.0",
+  "description": "Modulo Three Exercise",
+  "scripts": {
+    "test:easy": "npx jest ./tests/easy.test.ts",
+    "test:std": "npx jest ./tests/standart.test.ts",
+    "test:adv": "npx jest ./tests/advanced.test.ts",
+    "test:api": "npx jest ./tests/ModuloThreeFSM.test.ts",
+    "test:all": "npx jest --verbose ./tests/ModuloThreeFSM.test.ts ./tests/easy.test.ts ./tests/standart.test.ts ./tests/advanced.test.ts"
+  },
+  "author": "Oleksandr Podkidyshev",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.1",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0"
+  }
+}
