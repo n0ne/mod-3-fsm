@@ -1,8 +1,6 @@
 import { transitions } from "./common";
 
 /**
- * 
- * 
  * @param input binary string
  * @returns remainder of division by 3 
  */

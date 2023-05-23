@@ -44,7 +44,7 @@ export class ModuloThreeFSM {
   }
 
   /**
-    * Parses the input string and returns the remainder after division by 3 (δ)
+    * Parses the input string and returns the remainder after division by 3
     * @param {string} input - input binary string to parse.
     * @returns {number}     - remainder of dividing the input string by 3, or -1 if the input string is invalid.
     */
@@ -57,12 +57,23 @@ export class ModuloThreeFSM {
       if (!this._alphabet.includes(char)) {
         throw new Error("Non-valid char: " + char);
       }
-      currentState = this.makeTransition(currentState, char);
+      currentState = this.nextState(currentState, char);
     }
 
     const remainder: number = this._finalStates.includes(currentState) ? currentState : -1;
 
     return remainder;
+  }
+
+  /**
+  * Return next state from the current state based on the input character.
+  * @param {number} currentState - current state of the state machine.
+  * @param {string} char - input character to jump to.
+  * 
+  * @returns {number} next state of the state machine after the transition.
+  */
+  public nextState(currentState: number, char: string): number {
+    return this._transitions[currentState][char];
   }
 
   /**
@@ -138,16 +149,6 @@ export class ModuloThreeFSM {
   public set transitions(transitions: TransitionType) {
     this.checkObject('transitions', transitions);
     this._transitions = transitions;
-  }
-
-  /**
-  * Performs a transition from the current state based on the input character.
-  * @param {number} currentState - current state of the state machine.
-  * @param {string} char - input character to jump to.
-  * @returns {number} next state of the state machine after the transition.
-  */
-  private makeTransition(currentState: number, char: string): number {
-    return this._transitions[currentState][char];
   }
 
   /**

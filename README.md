@@ -1,6 +1,14 @@
 ## Modulo Three
 
-This little application gives several options for finding the remainder of division by 3.
+This little application gives several options for finding the remainder of division by 3:
+
+- ModuloThreeFSM: API library implements the ‘mod-three’ procedure. Available methods:
+  1. getters and setters for states, alphabet, initial state, final state and transitions object
+  2. parseInput(): method that returns the remainder of division by 3 of the input binary string
+  3. nextState(): a method that returns the next state of the FSM depending on the passed state and the incoming value
+- easy: converts a string to a number and returns the remainder after division by 3
+- standart: implement a state transition algorithm to implement the‘mod-three’ procedure
+- advanced: hardcoded version of finite automaton (FA) is a 5-tuple
 
 
 #### To run it localy
